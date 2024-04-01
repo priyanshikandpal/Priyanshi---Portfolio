@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshi - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(1, 1, 80);
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .leftSection {
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 100%; /* Ensure image fills its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .secondSection {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1e2167;
+            color: white;
+        }
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .vertical {
+            flex: 0 0 45%; /* Adjust the width based on the number of items per row */
+            margin: 10px;
+        }
+
+        .vertical img {
+            width: 100%; /* Ensure image fills its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .vertical-title {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .vertical-desc {
+            font-size: 12px;
+            color: gray;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+            padding: 20px;
+            text-align: center;
+            color: gray;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .footer-rights {
+            margin-top: 20px;
+        }
+        #about-link::before {
+            content: "Hi there, I am currently in my sixth semester and I am a Java enthusiast";
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        #about-link:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #contact-link::before {
+            content: "E-mail: priyanshikandpal.13@gmail.com \A Phone number: 7409117689";
+            white-space: pre;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        #contact-link:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #projects-link::before {
+            content: "Currently working on improvising this portfolio website";
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        #projects-link:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .leftSection {
+                margin-bottom: 20px;
+            }
+
+            .secondSection {
+                padding: 10px;
+            }
+
+            .vertical {
+                flex: 0 0 100%; /* Ensure one item per row on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Priyanshi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="about-link">About</a></li>
+                    <li><a href="#" id="services-link">Services</a></li>
+                    <li><a href="#" id="projects-link">Projects</a></li>
+                    <li><a href="#" id="contact-link">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div>Hi, My Name is <span class="purple">Priyanshi</span></div>
+                <div>and I am a</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="PngItem_1127587.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="PngItem_41675.png" alt="">
+                    <div class="vertical-title">
+                        Responsive Web-Design course (1st sem)
+                    </div>
+                    <div class="vertical-desc">
+                        Learnt the languages HTML and CSS used for design. Practical learning by building apps and
+                        responsive webpages.
+                    </div>
+                </div>
+                <!-- Add more vertical items similarly -->
+                <div class="vertical">
+                    <img class="image-top" src="js.png" alt="">
+                    <div class="vertical-title">
+                        JavaScript Algorithms and Data Structures course(2nd sem)
+                    </div>
+                    <div class="vertical-desc">
+                        Java Script fundamentals, OOP, Functional programming, algorithmic thinking and working with
+                        local storage.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="mlngjdhjgkhfa8r7c0al00c72f.png" alt="">
+                    <div class="vertical-title">
+                        Jovian Data Structures and Algorithm in Python course(4th sem)
+                    </div>
+                    <div class="vertical-desc">
+                        Beginner freindly introduction to common data structures and algorithms in Python.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="pngegg.png" alt="">
+                    <div class="vertical-title">
+                        Oracle Cloud Data Management course(5th sem)
+                    </div>
+                    <div class="vertical-desc">
+                        A combination of fundamental knowledge and hands-on-experience of data management services
+                        provided by Oracle.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="pngegg.png" alt="">
+                    <div class="vertical-title">
+                        Oracle Cloud Infrastructure course(5th sem)
+                    </div>
+                    <div class="vertical-desc">
+                        Learnt how to enable the transformation of technology infrastructure to the cloud.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="pngwing.com.png" alt="">
+                    <div class="vertical-title">
+                        Django Application Development with SQL and Database(6th sem)
+                    </div>
+                    <div class="vertical-desc">
+                        Introduces to basics of SQL, Django, and Bootstrap. Hands-on practical experience of developing
+                        and deploying a full-stack DJango web application on cloud.
+                    </div>
+                
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Priyanshi's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+        </div>
+        <div>
+            <!-- Your Form Code -->
+            <link rel="stylesheet" href="https://cdn.formbold.com/formbold.css" />
+            <br />
+            <div class="formbold-builder-form themeOne">
+                <form enctype="multipart/form-data" action="https://formbold.com/s/9xBZl" method="POST"
+                    class="mx-auto w-full max-w-[570px] rounded-[10px] border border-stroke bg-white p-10 themeOne">
+                    <div class="SortableItem fb-builder-item">
+                        <div class="mb-4">
+                            <label class="mb-2.5 block text-base text-black"><span>E-Mail</span><span
+                                    class="label-required pl-1 text-red-400">*</span></label><input type="email"
+                                class="w-full rounded border border-stroke bg-white px-5 py-3 text-base text-black outline-none focus:border-primary"
+                                name="email_input_03451FFE-75E2-42E0-8F82-056F28CD3741"
+                                placeholder="Enter Email Address" required="" value="" />
+                        </div>
+                    </div>
+                    <div class="SortableItem fb-builder-item">
+                        <div class="mb-4">
+                            <label class="mb-2.5 block text-base text-black"><span>Phone Number</span><span
+                                    class="label-required pl-1 text-red-400">*</span></label><input type="tel"
+                                class="w-full rounded border border-stroke bg-white px-5 py-3 text-base text-black outline-none focus:border-primary"
+                                name="phone_input_BA78565B-8032-4359-9383-5C3E7F6DBE6C" placeholder="Phone Number"
+                                required="" value="" />
+                        </div>
+                    </div>
+                    <div class="SortableItem fb-builder-item">
+                        <div class="mb-4">
+                            <label class="mb-2.5 block text-base text-black"><span>Suggestion</span><span
+                                    class="label-required pl-1 text-red-400">*</span></label><textarea
+                                class="w-full rounded border border-stroke bg-white px-5 py-3 text-base text-black outline-none focus:border-primary"
+                                name="text_area_86BEDD72-5CA2-4A32-B1E3-2FED45C94BA4" placeholder="Textarea Placeholder"
+                                required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar flex items-center space-x-3">
+                        <input type="submit"
+                            class="inline-flex cursor-pointer items-center justify-center rounded border border-primary bg-primary px-8 py-2 text-base font-medium text-white hover:bg-opacity-90"
+                            value="Submit" />
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.priyanshisportfolio.com | All right reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['pre final year student', 'Web Developer', 'Java developer', 'Blogger', 'Book Reviewer'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var servicesLink = document.getElementById("services-link");
+            servicesLink.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent the default action of following the link
+                alert("Currently no services available");
+            });
+        });
+    </script>
+</body>
+
+</html>
